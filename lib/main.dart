@@ -45,43 +45,8 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    OneSignal.shared.promptUserForPushNotificationPermission();
-//    flutterWebViewPlugin.onStateChanged.listen((viewState) async {
-//      if (viewState.type == WebViewState.finishLoad) {
-//        print('Not Loaded');
-//        setState(() {
-//
-//          widget =  WebviewScaffold(
-//            url: 'https://www.uditjharkhand.com',
-//            debuggingEnabled: true,
-//            initialChild: Center(child: CircularProgressIndicator(),),
-//            withJavascript: true,
-//            withZoom: true,
-//
-//
-//          );
-//
-////          flutterWebViewPlugin.launch('https://www.uditjharkhand.com',
-////            rect: new Rect.fromLTWH(
-////              0.0,
-////              0.0,
-////              MediaQuery.of(context).size.width,
-////              MediaQuery.of(context).size.height,
-////            ),
-////          );
-////
-////
-//       });
-//      }
-//      else{
-//        print('Loaded');
-//
-//        setState(() {
-//          widget = Center(child: CircularProgressIndicator());
-//        });
-//
-//      }
-//    });
+    //OneSignal.shared.promptUserForPushNotificationPermission();
+
     OneSignal.shared.init(
       "4c36ab5f-ed3f-41f7-aa79-9021fa9b7b6c",
 
