@@ -8,27 +8,13 @@ import 'package:udit_jharkhand/splash.dart';
 final flutterWebViewPlugin = FlutterWebviewPlugin();
 
 void main(){
-
-
-
-  runApp(MaterialApp(
+runApp(MaterialApp(
       home: Splash(),
   ));
 
 
 
 }
-
-
-Widget widget = WebviewScaffold(
-  url: 'https://www.uditjharkhand.com',
-  debuggingEnabled: true,
-  initialChild: Center(child: CircularProgressIndicator(),),
-  withJavascript: true,
-  withZoom: true,
-
-
-);
 
 class MyApp extends StatefulWidget {
 
@@ -63,11 +49,24 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.red
+        primaryColor: Colors.blue
       ),
 
     home: SafeArea(
-      child: widget,
+      child:  WebviewScaffold(
+        appBar: AppBar(
+          title: Text('Web View App'),
+        ),
+        url: 'https://www.uditjharkhand.com',
+        debuggingEnabled: true,
+        initialChild: Center(child: CircularProgressIndicator(),),
+        withJavascript: true,
+        withZoom: true,
+        allowFileURLs: true,
+        appCacheEnabled: true,
+        displayZoomControls: true,
+
+      ),
     ),
 
 
